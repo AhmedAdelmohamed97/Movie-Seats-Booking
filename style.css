@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #21212d;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    color: #e014c5;
+    font-size: 50px;
+}
+.movieContainer{
+    margin: 5px 15px;
+    border: #000 1px solid;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(197, 0, 241, 0.116);
+    text-align: center;
+}
+
+.movieContainer select {
+    appearance: none;
+    text-align: center;
+    font-size: 14px;
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 3px;
+    padding: 1px 5px;
+}
+
+.showcase{
+    margin: 15px 3px;
+    background-color: rgba(25, 25, 39, 0.432);
+    border-radius: 10px;
+    list-style: none;
+    list-style-type: none;
+    text-align: center;   
+}
+
+.showcase ul{
+    list-style: none;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    
+}
+
+
+.showcase ul li{
+    display: flex;
+    align-items: center;
+}
+
+.showcase small{
+    margin:0px 5px;
+}
+
+.container{
+    perspective: 1000px;
+
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seat{
+    height: 12px;
+    width: 15px;
+    background-color: #777777;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.row .seat{
+    margin: 5px 3px;
+    transition: background-color .3s;
+}
+
+.seat.occupied{
+    background-color: red;
+}
+
+.seat:nth-of-type(2){
+    margin-right: 18px;
+}
+
+.seat:nth-last-of-type(3){
+    margin-left: 18px;
+}
+
+.screen{
+    background-color: #fff;
+    width: 90%;
+    height: 100px;
+    margin:10px auto;
+    transform: rotateX(-45deg);
+    box-shadow: 0px 3px 10px rgba(255, 255, 255, .7);
+    display: flex;
+}
+
+.row .seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.seat.selected {
+    background-color: aqua;
+}
+
+
+span{
+    color: aqua;
+}
+
+.screen p{
+    color: #000;
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 900;
+}
+
